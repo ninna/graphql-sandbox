@@ -45,6 +45,10 @@ public class BareminimumApplication {
             Book book = new Book("Java: A Beginner's Guide, Sixth Edition", "0071809252", 728, author);
             authorRepository.save(author);
             bookRepository.save(book);
+
+            Author author1 = authorRepository.save(new Author("Nora", "Meils"));
+            Book book2 = new Book("Java2: A Beginner's Guide, Sixth Edition", "0071809252", 728, author1);
+            bookRepository.save(book2);
         };
     }
     @Bean
